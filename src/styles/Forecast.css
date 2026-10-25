@@ -1,0 +1,42 @@
+.forecast {
+    padding: 14px 16px;
+}
+
+.forecast ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.forecast li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2px 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--card-line);
+}
+.forecast li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+.forecast .weather-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+}
+.forecast__day {
+    grid-column: 2;
+    font-size: 1.05rem;
+    text-transform: capitalize;
+}
+.forecast__label {
+    grid-column: 1;
+    font-size: 0.9rem;
+    color: var(--text-soft);
+}
+.forecast__range {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    font-size: 1.05rem;
+    font-variant-numeric: tabular-nums;
+}

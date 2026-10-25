@@ -1,0 +1,71 @@
+.weather-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+.weather-background__sun {
+    position: absolute;
+    top: -170px;
+    right: -170px;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        #fffdf0 0%,
+        rgba(255, 244, 190, 0.9) 11%,
+        rgba(255, 232, 150, 0.4) 30%,
+        rgba(255, 230, 150, 0) 62%,
+    );
+    animation: sun-pulse 6s ease-in-out infinite;
+}
+.weather-background__star {
+    position: absolute;
+    border-radius: 50%;
+    background: #ffffff;
+    animation: star-twinkle 3s ease-in-out infinite;
+}
+.weather-background__cloud {
+    position: absolute;
+    left: -30%;
+    width: 160%;
+    height: 62%;
+    will-change: transform;
+    animation: cloud-drift 80s ease-in-out infinite alternate;
+    -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 45%, transparent 100%);
+}
+
+@keyframes sun-pulse {
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+@keyframes star-twinkle {
+    0%,
+    100% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes cloud-drift {
+    from {
+        transform: translateX(-8%);
+    }
+    to {
+        transform: translateX(8%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .weather-background__sun,
+    .weather-background__star,
+    .weather-background__cloud {
+        animation: none;
+    }
+}

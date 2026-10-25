@@ -1,0 +1,28 @@
+.current-weather {
+    padding: 28px 0 12px;
+    text-align: center;
+    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.22);
+}
+.current-weather h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.current-weather h1 span {
+    display: block;
+    margin-top: 2px;
+    font-size: 1rem;
+    color: var(--text-soft);
+}
+.current-weather__temp {
+    margin: 8px 0 0;
+    font-size: 6rem;
+    font-weight: 200;
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+.current-weather__label {
+    margin: 6px 0 0;
+    color: var(--text-soft);
+}

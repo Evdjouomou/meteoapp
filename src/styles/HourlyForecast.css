@@ -1,0 +1,29 @@
+.hourly-forecast {
+    padding: 14px 16px;
+}
+.hourly-forecast ul {
+    display: flex;
+    gap: 18px;
+    margin: 0;
+    padding: 12px 0 4px;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+.hourly-forecast li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 8px;
+    min-width: 46px;
+}
+.hourly-forecast__time {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    color: var(--text-soft);
+}
+.hourly-forecast__temp {
+    font-size: 1.05rem;
+}
