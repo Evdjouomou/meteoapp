@@ -40,7 +40,7 @@ Application web qui affiche la météo de n'importe quel lieu de la planète, av
 Prérequis : Node.js.
 
 ```
-git clone <adresse-du-depot>
+git clone <https://github.com/ton-nom/meteoapp.git>
 cd meteoapp
 npm install
 npm run dev
